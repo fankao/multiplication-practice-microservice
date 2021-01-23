@@ -2,6 +2,9 @@ package com.practice.challenge;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ChallengeGeneratorServiceImpl implements ChallengeGeneratorService {
 	private final static int MINIMUM_FACTOR = 11;
 	private final static int MAXIMUM_FACTOR = 100;

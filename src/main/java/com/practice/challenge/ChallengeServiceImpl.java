@@ -1,7 +1,9 @@
 package com.practice.challenge;
 
-import com.practice.user.User;
+import org.springframework.stereotype.Service;
 
+import com.practice.user.User;
+@Service
 public class ChallengeServiceImpl implements ChallengeService {
 
 	@Override
@@ -16,7 +18,7 @@ public class ChallengeServiceImpl implements ChallengeService {
 		// Builds the domain object. Null id for now.
 		ChallengeAttempt challengeAttempt = new ChallengeAttempt(
 				null, 
-				user.getId(), 
+				user, 
 				resultAttempt.getFactorA(), 
 				resultAttempt.getFactorB(), 
 				resultAttempt.getGuess(), 
