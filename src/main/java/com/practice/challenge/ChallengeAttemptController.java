@@ -1,5 +1,7 @@
 package com.practice.challenge;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
@@ -19,13 +21,17 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/attempts")
 class ChallengeAttemptController {
-	
+
 	private final ChallengeService challengeService;
 
 	@PostMapping
 	ResponseEntity<ChallengeAttempt> postAttempt(@RequestBody @Valid ChallengeAttemptDTO attemptDTO) {
-		return ResponseEntity
-				.ok(challengeService.verifyAttempt(attemptDTO));
+		return ResponseEntity.ok(challengeService.verifyAttempt(attemptDTO));
+	}
+
+	@GetMapping
+	ResponseEntity<List<ChallengeAttempt>> getStatistics(@RequestParam("alias") String alias) {
+		return ResponseEntity.ok(challengeService.getStatsForUser(alias));
 	}
 
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ApiClient from "../services/ApiClient";
+import LastAttemptsComponent from "./LastAttemptsComponent";
 
 export class ChallengeComponent extends Component {
   constructor(props) {
@@ -10,11 +11,16 @@ export class ChallengeComponent extends Component {
       user: "",
       message: "",
       guess: 0,
+      lastAttempts: [],
     };
     this.handleSubmitResult = this.handleSubmitResult.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
   componentDidMount() {
+    this.refreshChallenge();
+  }
+
+  refreshChallenge() {
     ApiClient.challenge().then((res) => {
       if (res.ok) {
         res.json().then((json) => {
@@ -55,9 +61,26 @@ export class ChallengeComponent extends Component {
                 " is wrong, but keep playing!"
             );
           }
+          this.updateLastAttempts(this.state.user); // NEW!
+          this.refreshChallenge();
         });
       } else {
         this.updateMessage("Error: server error or not available");
+      }
+    });
+  }
+  updateLastAttempts(userAlias: string) {
+    ApiClient.getAttempts(userAlias).then((res) => {
+      if (res.ok) {
+        let attempts: Attempt[] = [];
+        res.json().then((data) => {
+          data.forEach((item) => {
+            attempts.push(item);
+          });
+          this.setState({
+            lastAttempts: attempts,
+          });
+        });
       }
     });
   }
@@ -103,6 +126,9 @@ export class ChallengeComponent extends Component {
           <input type="submit" value="Submit" />
         </form>
         <h4>{this.state.message}</h4>
+        {this.state.lastAttempts.length > 0 && (
+          <LastAttemptsComponent lastAttempts={this.state.lastAttempts} />
+        )}
       </div>
     );
   }
