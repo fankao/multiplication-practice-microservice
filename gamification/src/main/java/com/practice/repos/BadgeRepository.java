@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.repos;
 
 import java.util.List;
 

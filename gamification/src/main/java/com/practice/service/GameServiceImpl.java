@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.service;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,7 +11,10 @@ import org.springframework.stereotype.Service;
 import com.practice.badgeprocessors.BadgeProcessor;
 import com.practice.domain.BadgeCard;
 import com.practice.domain.BadgeType;
+import com.practice.domain.ChallengeSolvedDTO;
 import com.practice.domain.ScoreCard;
+import com.practice.repos.BadgeRepository;
+import com.practice.repos.ScoreRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -67,7 +70,7 @@ public class GameServiceImpl implements GameService {
 				// maps the optionals if present to new BadgeCards
 				.map(badgeType -> new BadgeCard(solvedChallenge.getUserId(), badgeType)).collect(Collectors.toList());
 		badgeRepository.saveAll(newBadgeCards);
-		
+
 		return newBadgeCards;
 	}
 

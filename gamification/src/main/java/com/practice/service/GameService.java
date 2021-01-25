@@ -1,8 +1,9 @@
-package com.practice;
+package com.practice.service;
 
 import java.util.List;
 
 import com.practice.domain.BadgeType;
+import com.practice.domain.ChallengeSolvedDTO;
 
 import lombok.Value;
 

@@ -3,8 +3,8 @@ package com.practice.badgeprocessors;
 import java.util.List;
 import java.util.Optional;
 
-import com.practice.ChallengeSolvedDTO;
 import com.practice.domain.BadgeType;
+import com.practice.domain.ChallengeSolvedDTO;
 import com.practice.domain.ScoreCard;
 
 public class FirstWonBadgeProcessor implements BadgeProcessor {

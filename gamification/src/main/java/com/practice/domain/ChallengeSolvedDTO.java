@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.domain;
 
 import lombok.Value;
 
