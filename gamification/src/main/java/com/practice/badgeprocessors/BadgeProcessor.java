@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.practice.domain.BadgeType;
-import com.practice.domain.ChallengeSolvedDTO;
+import com.practice.domain.ChallengeSolvedEvent;
 import com.practice.domain.ScoreCard;
 
 public interface BadgeProcessor {
@@ -15,7 +15,7 @@ public interface BadgeProcessor {
 	 * @return a BadgeType if the user is entitled to this badge, otherwise empty
 	 */
 	Optional<BadgeType> processForOptionalBadge(int currentScore, List<ScoreCard> scoreCardList,
-			ChallengeSolvedDTO solved);
+			ChallengeSolvedEvent solved);
 	
 	/**
 	* @return the BadgeType object that this processor is handling. You can use

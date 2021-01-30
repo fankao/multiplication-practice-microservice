@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.practice.domain.ChallengeSolvedDTO;
+import com.practice.domain.ChallengeSolvedEvent;
 import com.practice.service.GameService;
 
 import lombok.RequiredArgsConstructor;
@@ -20,9 +20,8 @@ public class GameController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.OK)
-	public void postResult(@RequestBody ChallengeSolvedDTO solvedDTO) {
+	public void postResult(@RequestBody ChallengeSolvedEvent solvedDTO) {
 		gameService.newAttemptForUser(solvedDTO);
-		
 	}
 
 }

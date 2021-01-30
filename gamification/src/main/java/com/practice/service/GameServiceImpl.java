@@ -6,12 +6,14 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import com.practice.badgeprocessors.BadgeProcessor;
 import com.practice.domain.BadgeCard;
 import com.practice.domain.BadgeType;
-import com.practice.domain.ChallengeSolvedDTO;
+import com.practice.domain.ChallengeSolvedEvent;
 import com.practice.domain.ScoreCard;
 import com.practice.repos.BadgeRepository;
 import com.practice.repos.ScoreRepository;
@@ -28,8 +30,9 @@ public class GameServiceImpl implements GameService {
 	// Spring injects all the @Component beans in this list
 	private final List<BadgeProcessor> badgeProcessors;
 
+	@Transactional
 	@Override
-	public GameResult newAttemptForUser(ChallengeSolvedDTO challenge) {
+	public GameResult newAttemptForUser(final ChallengeSolvedEvent challenge) {
 		// We give points only if it's correct
 		if (challenge.isCorrect()) {
 			ScoreCard scoreCard = new ScoreCard(challenge.getUserId(), challenge.getAttemptId());
@@ -50,7 +53,7 @@ public class GameServiceImpl implements GameService {
 	 * Checks the total score and the different score cards obtained to give new
 	 * badges in case their conditions are met.
 	 */
-	private List<BadgeCard> processForBadges(ChallengeSolvedDTO solvedChallenge) {
+	private List<BadgeCard> processForBadges(ChallengeSolvedEvent solvedChallenge) {
 		Optional<Integer> optTotalScore = scoreRepository.getTotalScoreForUser(solvedChallenge.getUserId());
 		if (optTotalScore.isEmpty())
 			return Collections.emptyList();

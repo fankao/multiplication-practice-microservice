@@ -3,7 +3,7 @@ package com.practice.domain;
 import lombok.Value;
 
 @Value
-public class ChallengeSolvedDTO {
+public class ChallengeSolvedEvent {
 	long attemptId;
 	boolean correct;
 	int factorA;

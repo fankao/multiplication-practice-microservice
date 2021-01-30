@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb06393f-8097-4158-ab00-73df3794d6d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/challenges-frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/challenges-frontend/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges-frontend/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/challenges-frontend/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/challenges-frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges-frontend/src/components/ChallengeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenges-frontend/src/components/ChallengeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges-frontend/src/services/ApiClient.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/BadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/BadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/BronzeBadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/BronzeBadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/FirstWonBadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/FirstWonBadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/GoldBadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/GoldBadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/LuckyNumberBadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/LuckyNumberBadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/SilverBadgeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/badgeprocessors/SilverBadgeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/domain/ChallengeSolvedDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/domain/ChallengeSolvedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/LeaderBoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/java/com/practice/service/LeaderBoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamification/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gamification/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nlnQoX8BXlwAdE0ueKmnWpPBXi" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb06393f-8097-4158-ab00-73df3794d6d4" name="Default Changelist" comment="" />
+      <created>1611973534126</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611973534126</updated>
+      <workItem from="1611973536159" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

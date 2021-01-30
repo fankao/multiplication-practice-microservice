@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import com.practice.domain.BadgeType;
-import com.practice.domain.ChallengeSolvedDTO;
+import com.practice.domain.ChallengeSolvedEvent;
 import com.practice.domain.ScoreCard;
 
 public class SilverBadgeProcessor implements BadgeProcessor {
 
 	@Override
 	public Optional<BadgeType> processForOptionalBadge(int currentScore, List<ScoreCard> scoreCardList,
-			ChallengeSolvedDTO solved) {
+			ChallengeSolvedEvent solved) {
 		// TODO Auto-generated method stub
 		return currentScore > 150 ? Optional.of(BadgeType.SILVER) : Optional.empty();
 	}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import ApiClient from "../services/ApiClient";
+import ChallengesApiClient from "../services/ChallengesApiClient";
 import LastAttemptsComponent from "./LastAttemptsComponent";
+import LeaderBoardComponent from "./LeaderBoardComponent.";
 
 export class ChallengeComponent extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export class ChallengeComponent extends Component {
   }
 
   refreshChallenge() {
-    ApiClient.challenge().then((res) => {
+    ChallengesApiClient.challenge().then((res) => {
       if (res.ok) {
         res.json().then((json) => {
           this.setState({
@@ -44,7 +45,7 @@ export class ChallengeComponent extends Component {
 
   handleSubmitResult(event) {
     event.preventDefault();
-    ApiClient.sendGuess(
+    ChallengesApiClient.sendGuess(
       this.state.user,
       this.state.a,
       this.state.b,
@@ -70,7 +71,7 @@ export class ChallengeComponent extends Component {
     });
   }
   updateLastAttempts(userAlias: string) {
-    ApiClient.getAttempts(userAlias).then((res) => {
+    ChallengesApiClient.getAttempts(userAlias).then((res) => {
       if (res.ok) {
         let attempts: Attempt[] = [];
         res.json().then((data) => {
@@ -129,6 +130,8 @@ export class ChallengeComponent extends Component {
         {this.state.lastAttempts.length > 0 && (
           <LastAttemptsComponent lastAttempts={this.state.lastAttempts} />
         )}
+
+        <LeaderBoardComponent />
       </div>
     );
   }
